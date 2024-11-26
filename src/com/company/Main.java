@@ -64,11 +64,15 @@ public class Main {
 
      */
 
-        INotification notification = new Notification();
-
+        INotification basic = new Notification();
         //sending basic notification user story 1
-        String message = "You have a new follower";
-        notification.send(message);
+        String message = "PLease update to the latest OS ";
+        basic.send(message);
+
+        INotification sms = new SMSNotification();
+        String text = "Come over for dinner tonight!";
+        sms.send(text);
+
 
 
     }
