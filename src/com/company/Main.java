@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
 	ArrayList<String> data = new ArrayList<>();
     data.add("The first author whose articles were most frequently selected ... with three articles in the sample.");
     data.add("The two institutions with the most articles included in the ... ");
@@ -34,10 +34,19 @@ public class Main {
         //Logger User story 5
         Logger logger = Logger.getInstance();
 
-        logger.setLogFile("test.log");
+        //logger user story 8 default to console
+        logger.log("INFO", "info message");
+
+        //logger user story 8 switching to file
+        logger.setOutput(new FileLogOutput("test2.log"));
+        logger.log("INFO", "info message");
+
+        //logger user story 8 switching back to console
+        logger.setOutput(new ConsoleLogOutput());
+        logger.log("INFO", "Switched back to console!");
 
         //Logger User story 2
-        logger.log("INFO", "info message");
+
         logger.log("DEBUG", "debug message");
         logger.log("ERROR", "error message");
 
@@ -45,7 +54,7 @@ public class Main {
         logger.archiveLogs("archive.log", true); // Clear log history after archiving
 
         //Logger User story 5
-        logger.closeLogFile();
+        //logger.closeLogFile();
 
         //Logger User Story 3
         System.out.println("\nLog History:");
