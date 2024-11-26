@@ -30,5 +30,14 @@ public class Main {
 
         file.printFormatted();
 
+
+        Logger logger = Logger.getInstance();
+
+        //Logger User story 2
+        logger.log("INFO", "info message");
+        logger.log("DEBUG", "debug message");
+        logger.log("ERROR", "error message");
+
+
     }
 }

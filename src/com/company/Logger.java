@@ -19,4 +19,10 @@ public class Logger {
         System.out.println(message);
     }
 
+    //log message with a severity level
+    public void log(String severity, String message) {
+        String formattedMessage = String.format("[%s] %s", severity.toUpperCase(), message);
+        System.out.println(formattedMessage);
+    }
+
 }
