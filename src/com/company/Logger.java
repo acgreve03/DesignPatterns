@@ -57,5 +57,22 @@ public class Logger {
             fileWriter.close(); // Close the file writer when done
         }
     }
+/**
+ * archives the log history to the specified file.
+ *
+ * @param archiveFilePath  file path to archive the logs
+ * @param clearAfterArchive whether to clear the log history after archiving
+ */
+    public void archiveLogs(String archiveFilePath, boolean clearAfterArchive) throws IOException {
+        try (PrintWriter archiveWriter = new PrintWriter(new FileWriter(archiveFilePath, true))) {
+            for (String log : logHistory) {
+                archiveWriter.println(log);
+            }
+        }
+
+        if (clearAfterArchive) {
+            logHistory.clear();
+        }
+    }
 
 }

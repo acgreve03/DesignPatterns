@@ -41,6 +41,9 @@ public class Main {
         logger.log("DEBUG", "debug message");
         logger.log("ERROR", "error message");
 
+        //archive logs to a new file User story 7
+        logger.archiveLogs("archive.log", true); // Clear log history after archiving
+
         //Logger User story 5
         logger.closeLogFile();
 
