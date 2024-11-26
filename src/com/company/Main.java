@@ -1,10 +1,11 @@
 package com.company;
+import java.io.IOException;
 import java.util.ArrayList;
 
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 	ArrayList<String> data = new ArrayList<>();
     data.add("The first author whose articles were most frequently selected ... with three articles in the sample.");
     data.add("The two institutions with the most articles included in the ... ");
@@ -30,13 +31,18 @@ public class Main {
 
         file.printFormatted();
 
-
+        //Logger User story 5
         Logger logger = Logger.getInstance();
+
+        logger.setLogFile("test.log");
 
         //Logger User story 2
         logger.log("INFO", "info message");
         logger.log("DEBUG", "debug message");
         logger.log("ERROR", "error message");
+
+        //Logger User story 5
+        logger.closeLogFile();
 
         //Logger User Story 3
         System.out.println("\nLog History:");
