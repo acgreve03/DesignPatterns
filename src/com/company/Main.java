@@ -38,6 +38,8 @@ public class Main {
         logger.log("DEBUG", "debug message");
         logger.log("ERROR", "error message");
 
-
+        //Logger User Story 3
+        System.out.println("\nLog History:");
+        logger.getLogHistory().forEach(System.out::println);
     }
 }
