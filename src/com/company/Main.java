@@ -73,6 +73,10 @@ public class Main {
         String text = "Come over for dinner tonight!";
         sms.send(text);
 
+        INotification email = new EmailNotification();
+        String mail = "You are my favorite student. Regards, Dr. Parra-Rodriguez";
+        email.send(mail);
+
 
 
     }
