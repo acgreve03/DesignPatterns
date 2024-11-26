@@ -1,101 +1,12 @@
 package com.company;
-import java.io.IOException;
+import com.Notifications.*;
+
 import java.util.ArrayList;
 
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        /* TEXT FORMATTER
-        ArrayList<String> data = new ArrayList<>();
-        data.add("The first author whose articles were most frequently selected ... with three articles in the sample.");
-        data.add("The two institutions with the most articles included in the ... ");
-        data.add("The authors of the articles in the selected sample represented ... ");
-        data.add("242 institutions, 207 were universities or colleges; 24 were ... ");
-        data.add("technology, or polytechnics; and 11 were other types of ... ");
-
-        TextFile file = new TextFile(data);
-        int option = 1;
-        switch(option){
-            case 0:
-                file.setFormat(new PlainTextFormat());
-                break;
-            case 1:
-                file.setFormat(new HTMLFormat());
-                break;
-            case 2:
-                file.setFormat(new MarkdownFormat());
-                break;
-            default:
-                file.setFormat(new PlainTextFormat());
-            }
-
-            file.printFormatted(); */
-
-        /* LOGGER
-        //Logger User story 5
-        Logger logger = Logger.getInstance();
-
-        //logger user story 8 default to console
-        logger.log("INFO", "info message");
-
-        //logger user story 8 switching to file
-        logger.setOutput(new FileLogOutput("test2.log"));
-        logger.log("INFO", "info message");
-
-        //logger user story 8 switching back to console
-        logger.setOutput(new ConsoleLogOutput());
-        logger.log("INFO", "Switched back to console!");
-
-        //Logger User story 2
-
-        logger.log("DEBUG", "debug message");
-        logger.log("ERROR", "error message");
-
-        //archive logs to a new file User story 7
-        logger.archiveLogs("archive.log", true); // Clear log history after archiving
-
-        //Logger User story 5
-        //logger.closeLogFile();
-
-        //Logger User Story 3
-        System.out.println("\nLog History:");
-        logger.getLogHistory().forEach(System.out::println);
-
-     */
-
-        INotification basic = new Notification();
-        INotification sms = new SMSNotification();
-        INotification email = new EmailNotification();
-        INotification ping = new SlackNotification();
-
-        Preferences p = new Preferences();
-        p.addNotifChannel(basic);
-        p.addNotifChannel(sms);
-        p.addNotifChannel(email);
-        p.addNotifChannel(ping);
-
-        p.sendNotifs("Universal Notification: This should appear on all channels!");
-
-        /*
-        //sending basic notification user story 1
-        String message = "PLease update to the latest OS ";
-        basic.send(message);
-
-
-        String text = "Come over for dinner tonight!";
-        sms.send(text);
-
-
-        String mail = "You are my favorite student. Regards, Dr. Parra-Rodriguez";
-        email.send(mail);
-
-
-        String msg = "Finish this sprint by the end of the day please.";
-        ping.send(msg);
-         */
-
-
 
     }
 }
