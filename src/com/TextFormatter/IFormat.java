@@ -1,4 +1,4 @@
-package com.company;
+package com.TextFormatter;
 import java.util.ArrayList;
 
 public interface IFormat {

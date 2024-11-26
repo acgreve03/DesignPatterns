@@ -1,9 +1,9 @@
-package com.company;
+package com.TextFormatter;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-public class MarkdownFormat implements IFormat{
+public class MarkdownFormat implements IFormat {
     @Override
     public void format(ArrayList<String> data) {
         String[] options = {"**", "***", "<sub>", "~~", "_"};

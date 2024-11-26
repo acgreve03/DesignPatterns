@@ -1,8 +1,8 @@
-package com.company;
+package com.TextFormatter;
 
 import java.util.ArrayList;
 
-public class HTMLFormat implements IFormat{
+public class HTMLFormat implements IFormat {
     @Override
     public void format(ArrayList<String> data) {
         System.out.println("<html dir=\"ltr\" lang=\"en\">");

@@ -1,0 +1,21 @@
+[INFO] info message
+[DEBUG] debug message
+[ERROR] error message
+[INFO] info message
+[DEBUG] debug message
+[ERROR] error message
+[INFO] info message
+[INFO] info message
+[INFO] Switched back to console!
+[DEBUG] debug message
+[ERROR] error message
+[2024-11-25 23:43:52] [INFO] info message
+[2024-11-25 23:43:52] [INFO] info message
+[2024-11-25 23:43:52] [INFO] Switched back to console!
+[2024-11-25 23:43:52] [DEBUG] debug message
+[2024-11-25 23:43:52] [ERROR] error message
+[2024-11-26 15:04:51] [INFO] info message
+[2024-11-26 15:04:51] [INFO] info message
+[2024-11-26 15:04:51] [INFO] Switched back to console!
+[2024-11-26 15:04:51] [DEBUG] debug message
+[2024-11-26 15:04:51] [ERROR] error message

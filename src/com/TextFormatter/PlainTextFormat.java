@@ -1,4 +1,6 @@
-package com.company;
+package com.TextFormatter;
+import com.TextFormatter.IFormat;
+
 import java.util.ArrayList;
 
 public class PlainTextFormat implements IFormat {
