@@ -77,6 +77,10 @@ public class Main {
         String mail = "You are my favorite student. Regards, Dr. Parra-Rodriguez";
         email.send(mail);
 
+        INotification ping = new SlackNotification();
+        String msg = "Finish this sprint by the end of the day please.";
+        ping.send(msg);
+
 
 
     }
