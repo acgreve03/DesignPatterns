@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.io.PrintWriter;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Logger {
     //single instance of logger
@@ -36,7 +38,11 @@ public class Logger {
 
     //log message with a severity level
     public void log(String severity, String message) {
-        String formattedMessage = String.format("[%s] %s", severity.toUpperCase(), message);
+        //set timestamp
+        String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+
+        String formattedMessage = String.format("[%s] [%s] %s", timestamp, severity.toUpperCase(), message);
+
         logHistory.add(formattedMessage);
         output.write(formattedMessage);
 
